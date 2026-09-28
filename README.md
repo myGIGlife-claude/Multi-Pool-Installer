@@ -21,6 +21,7 @@ All in one installer for your crypto-server needs.
 
 ## TOC
 
+- [What's new](#-whats-new)
 - [Installation](#-installation)
 - [Usage](#-usage)
 - [YiiMP Single Server Install](#-yiimp-single-server-install)
@@ -33,6 +34,23 @@ All in one installer for your crypto-server needs.
 - [Credits](#-credits)
 - [License](#-license)
 - [Support](#-support)
+
+## 🆕 What's new
+
+The installer and the YiiMP fork were brought up to date in 2026:
+
+* **Systems:** Ubuntu 22.04, 24.04 and 26.04 LTS, with PHP 8.3 by default.
+* **Security:** DB passwords go in owner-only files. The installer checks commands for failures, and each server gets a firewall (ufw). The multi-server install reuses one SSH connection per server and checks host keys.
+* **YiiMP:** runs on PHP 8.1+ with Yii 1.1.32. Its source is [mygiglifeinc-glitch/yiimp](https://github.com/mygiglifeinc-glitch/yiimp).
+* **New algos:** 34 more algos. Some of them use their own stratum protocol:
+  * 24 Bitcoin-stratum algos, including ghostrider, flex, verthash, blake3 and the yespower family.
+  * KawPoW family: RVN, EVR, MEWC, FIRO and others.
+  * Equihash: ZEC, BTG, KMD and others.
+  * Decred (BLAKE3).
+  * RandomX: Monero.
+* **Litecoin MWEB** blocks are supported.
+
+Some coins need extra steps on their daemons: KawPoW, Equihash, Decred and Monero. See [Algos with their own stratum protocols](https://github.com/mygiglifeinc-glitch/multipool_yiimp_single#algos-with-their-own-stratum-protocols).
 
 ## 💾 Installation
 
