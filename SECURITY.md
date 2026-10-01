@@ -22,8 +22,8 @@ Please do not disclose the issue publicly until a fix has been released.
 
 This repository only contains the `bootstrap.sh` launcher. The actual pool
 installer logic lives in a separate repository
-([mygiglifeinc-glitch/multipool_setup](https://github.com/mygiglifeinc-glitch/multipool_setup))
+([myGIGlife-claude/multipool_setup](https://github.com/myGIGlife-claude/multipool_setup))
 that `bootstrap.sh` clones, which in turn installs
-[multipool_yiimp_single](https://github.com/mygiglifeinc-glitch/multipool_yiimp_single) and
-[multipool_yiimp_multi](https://github.com/mygiglifeinc-glitch/multipool_yiimp_multi). Vulnerabilities in that installer
+[multipool_yiimp_single](https://github.com/myGIGlife-claude/multipool_yiimp_single) and
+[multipool_yiimp_multi](https://github.com/myGIGlife-claude/multipool_yiimp_multi). Vulnerabilities in that installer
 itself should be reported to that repository.

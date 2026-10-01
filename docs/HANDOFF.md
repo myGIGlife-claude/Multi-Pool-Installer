@@ -3,9 +3,9 @@
 The full handoff (state of all five repos, the owner's rules, the work queue,
 how to rebuild the test environment, and the test tools) is in the YiiMP fork:
 
-https://github.com/mygiglifeinc-glitch/yiimp/blob/next/docs/handoff/HANDOFF.md
+https://github.com/myGIGlife-claude/yiimp/blob/next/docs/handoff/HANDOFF.md
 
-    git clone https://github.com/mygiglifeinc-glitch/yiimp
+    git clone https://github.com/myGIGlife-claude/yiimp
     less yiimp/docs/handoff/HANDOFF.md    # start at section 0
 
 Short version (2026-09-30):
