@@ -41,7 +41,7 @@ The installer and the YiiMP fork were brought up to date in 2026:
 
 * **Systems:** Ubuntu 22.04, 24.04 and 26.04 LTS, with PHP 8.3 by default.
 * **Security:** DB passwords go in owner-only files. The installer checks commands for failures, and each server gets a firewall (ufw). The multi-server install reuses one SSH connection per server and checks host keys.
-* **YiiMP:** runs on PHP 8.1+ with Yii 1.1.32. Its source is [mygiglifeinc-glitch/yiimp](https://github.com/mygiglifeinc-glitch/yiimp).
+* **YiiMP:** runs on PHP 8.1+ with Yii 1.1.32. Its source is [myGIGlife-claude/yiimp](https://github.com/myGIGlife-claude/yiimp).
 * **New algos:** 34 more algos. Some of them use their own stratum protocol:
   * 24 Bitcoin-stratum algos, including ghostrider, flex, verthash, blake3 and the yespower family.
   * KawPoW family: RVN, EVR, MEWC, FIRO and others.
@@ -50,7 +50,7 @@ The installer and the YiiMP fork were brought up to date in 2026:
   * RandomX: Monero.
 * **Litecoin MWEB** blocks are supported.
 
-Some coins need extra steps on their daemons: KawPoW, Equihash, Decred and Monero. See [Algos with their own stratum protocols](https://github.com/mygiglifeinc-glitch/multipool_yiimp_single#algos-with-their-own-stratum-protocols).
+Some coins need extra steps on their daemons: KawPoW, Equihash, Decred and Monero. See [Algos with their own stratum protocols](https://github.com/myGIGlife-claude/multipool_yiimp_single#algos-with-their-own-stratum-protocols).
 
 ## 💾 Installation
 
@@ -63,17 +63,17 @@ support and are no longer supported.
 YiiMP is installed with PHP 8.3 (from `ppa:ondrej/php`), Ubuntu's own
 MariaDB, nginx and certbot packages. Advanced install-time options (PHP
 version, installing from a fork or a specific branch/tag) are documented in
-the [multipool_setup README](https://github.com/mygiglifeinc-glitch/multipool_setup#install-time-overrides).
+the [multipool_setup README](https://github.com/myGIGlife-claude/multipool_setup#install-time-overrides).
 
 ```
-curl -fsSL https://raw.githubusercontent.com/mygiglifeinc-glitch/Multi-Pool-Installer/master/bootstrap.sh | bash
+curl -fsSL https://raw.githubusercontent.com/myGIGlife-claude/Multi-Pool-Installer/master/bootstrap.sh | bash
 ```
 
 Before piping any script into `bash`, it's good practice to review it
 first. You can download and read it before running it instead:
 
 ```
-curl -fsSL -o bootstrap.sh https://raw.githubusercontent.com/mygiglifeinc-glitch/Multi-Pool-Installer/master/bootstrap.sh
+curl -fsSL -o bootstrap.sh https://raw.githubusercontent.com/myGIGlife-claude/Multi-Pool-Installer/master/bootstrap.sh
 less bootstrap.sh
 bash bootstrap.sh
 ```
@@ -83,7 +83,7 @@ Update:
 When a new release is made public updating is as simple as running the same command as above.
 
 ```
-curl -fsSL https://raw.githubusercontent.com/mygiglifeinc-glitch/Multi-Pool-Installer/master/bootstrap.sh | bash
+curl -fsSL https://raw.githubusercontent.com/myGIGlife-claude/Multi-Pool-Installer/master/bootstrap.sh | bash
 ```
 
 ## ▶️ Usage

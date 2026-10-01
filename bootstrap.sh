@@ -5,12 +5,12 @@
 #
 # This script is intended to be run like this:
 #
-#   curl -fsSL https://raw.githubusercontent.com/mygiglifeinc-glitch/Multi-Pool-Installer/master/bootstrap.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/myGIGlife-claude/Multi-Pool-Installer/master/bootstrap.sh | bash
 #
 # Piping a remote script straight into bash means you are trusting this file
 # sight-unseen. If you'd rather review it first:
 #
-#   curl -fsSL -o bootstrap.sh https://raw.githubusercontent.com/mygiglifeinc-glitch/Multi-Pool-Installer/master/bootstrap.sh
+#   curl -fsSL -o bootstrap.sh https://raw.githubusercontent.com/myGIGlife-claude/Multi-Pool-Installer/master/bootstrap.sh
 #   less bootstrap.sh
 #   bash bootstrap.sh
 #
@@ -20,7 +20,7 @@ set -euo pipefail
 
 # Branch or tag of multipool_setup to install.
 TAG="${TAG:-master}"
-REPO_URL="https://github.com/mygiglifeinc-glitch/multipool_setup"
+REPO_URL="https://github.com/myGIGlife-claude/multipool_setup"
 INSTALL_DIR="${HOME}/multipool/install"
 
 # TAG is attacker-controllable (it's read from the environment). Reject
