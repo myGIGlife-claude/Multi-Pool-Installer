@@ -39,7 +39,7 @@ All in one installer for your crypto-server needs.
 
 The installer and the YiiMP fork were brought up to date in 2026:
 
-* **Systems:** Ubuntu 22.04, 24.04 and 26.04 LTS, with PHP 8.3 by default.
+* **Systems:** Ubuntu 22.04, 24.04 and 26.04 LTS, with PHP 8.3 by default (PHP 8.5 on 26.04).
 * **Security:** DB passwords go in owner-only files. The installer checks commands for failures, and each server gets a firewall (ufw). The multi-server install reuses one SSH connection per server and checks host keys.
 * **YiiMP:** runs on PHP 8.1+ with Yii 1.1.32. Its source is [myGIGlife-claude/yiimp](https://github.com/myGIGlife-claude/yiimp).
 * **New algos:** 34 more algos. Some of them use their own stratum protocol:
@@ -60,8 +60,9 @@ Requires a fresh 64-bit (x86_64) Ubuntu 22.04, 24.04 or 26.04 LTS
 installation. Ubuntu 16.04, 18.04 and 20.04 have reached end of standard
 support and are no longer supported.
 
-YiiMP is installed with PHP 8.3 (from `ppa:ondrej/php`), Ubuntu's own
-MariaDB, nginx and certbot packages. Advanced install-time options (PHP
+YiiMP is installed with PHP 8.3 from `ppa:ondrej/php` on 22.04 and 24.04.
+The PPA has no packages for 26.04, so there Ubuntu's own PHP 8.5 is used.
+MariaDB, nginx and certbot are Ubuntu's own packages. Advanced install-time options (PHP
 version, installing from a fork or a specific branch/tag) are documented in
 the [multipool_setup README](https://github.com/myGIGlife-claude/multipool_setup#install-time-overrides).
 
@@ -162,7 +163,7 @@ Directory | Files
 
 Permissions have been setup correctly allowing your main user write acess to the /home/crypto-data directories! Changing file or directory permissions after install will cause your YiiMP to not function correctly, you have been warned!!
 
-By default even though all stratum algos start on server start, the ports have been blocked by the firewall. To open a port type:
+Without dedicated coin ports, most algo stratums start at boot (the KawPoW family and RandomX are started by hand, see [Algos with their own stratum protocols](https://github.com/myGIGlife-claude/multipool_yiimp_single#algos-with-their-own-stratum-protocols)), but their ports are blocked by the firewall. To open a port type:
 ```
 sudo ufw allow port number
 ```
@@ -247,7 +248,7 @@ Directory | Files | Server
 
 Permissions have been setup correctly allowing your main user write acess to the /home/crypto-data directories! Changing file or directory permissions after install will cause your YiiMP to not function correctly, you have been warned!!
 
-By default even though all stratum algos start on server start, the ports have been blocked by the firewall. To open a port type:
+Without dedicated coin ports, `stratum boot` starts the algo stratums at boot, one by one while at least 256 MB of memory is free (the KawPoW family and RandomX are started by hand). Their ports are blocked by the firewall. To open a port type:
 ```
 sudo ufw allow port number
 ```
